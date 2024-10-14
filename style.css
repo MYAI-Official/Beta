@@ -23,33 +23,17 @@ p {
     margin: 20px 0;
 }
 
-.sparkle
-path:nth-of-type(1) {
-    --scale 0.5;
-    --delay: 0.1;
-    --base: 40%;
+.email-button {
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s; ease; /* Animation timing */
 }
-.sparkle
-path:nth-of-type(2) {
-    --scale: 1.5;
-    --delay: 0.2;
-    --base: 20%;
+
+.email-button:hover {
+    background-color: #357a38; /* Darker shade when hovered */
 }
-button:before {
-  content: "";
-  position: absolute;
-  inset: -0.25em;
-  z-index: -1;
-  border: 0.25em solid hsl(260, 97%, 50%, 0.5); /* Glowing border */
-  border-radius: 100px;
-  opacity: var(--active, 0);
-  transition: opacity var(--transition);
-}
-.backdrop {
-  position: absolute;
-  inset: var(--cut);
-  background: var(--bg);
-  border-radius: 100px;
-  transition: background var(--transition);
-}
-    
