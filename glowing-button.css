@@ -1,0 +1,37 @@
+.glowing-button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff; /* Text color */
+    text-decoration: none; /* Remove underline from link */
+    border: none;
+    border-radius: 25px; /* Rounded corners */
+    overflow: hidden; /* Ensure the glowing effect stays within the button */
+    background: transparent; /* Transparent background to match page */
+    transition: color 0.3s ease; /* Transition effect for text color */
+}
+
+.glowing-button:before {
+    content: "";
+    position: absolute;
+    inset: -0.25em; /* Positioning around the button */
+    border: 0.25em solid hsl(260 97% 50% / 0.5); /* Glowing effect */
+    border-radius: 100px; /* Make the border rounded */
+    opacity: 0; /* Start invisible */
+    transition: opacity 0.3s ease; /* Transition for the opacity */
+    z-index: -1; /* Behind the text */
+}
+
+.glowing-button:hover:before {
+    opacity: 1; /* Show the glowing effect on hover */
+}
+
+.glowing-button:hover {
+    color: #4285F4; /* Change text color on hover */
+}
+
+body {
+    background-color: #121212; /* Your page's background color */
+    color: #ffffff; /* Default text color */
+    font-family: Arial, sans-serif;
+}
