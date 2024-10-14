@@ -5,43 +5,207 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MY AI</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #292929;
+            font-family: Arial, sans-serif;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .email-button {
+            background-color: #ffffff; /* Set button background color to white */
+            color: #000000; /* Set button text color to black */
+            border: none; /* Remove any borders */
+            border-radius: 25px; /* Round the button corners */
+            padding: 10px 20px; /* Add padding inside the button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            font-size: 16px; /* Set button text size */
+            transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+            text-decoration: none; /* Remove underline from button text */
+}
+
+.email-button:hover {
+    background-color: #0080ff; /* Change button background to blue when hovered */
+}
+.email-button:active {
+    background-color: #005bb5; /* Darker blue when clicked */
+    transform: scale(0.98); /* Slightly shrink the button when clicked */
+        }
+
+        /* Social media icons section */
+        .social-icons {
+            position: fixed;
+            bottom: 20px; /* Distance from bottom */
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        nav {
+            width: 350px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 70px; /* Space above the icons */
+        }
+
+        nav a {
+            width: 60px;
+            height: 60px;
+            border: #fff solid 1px;
+            border-radius: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        nav a::before {
+            position: absolute;
+            content: '';
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            border: #fff dashed 2px;
+            border-radius: 100%;
+            opacity: 0;
+            transition: 0.3s all ease-in-out;
+        }
+
+        nav a:hover::before {
+            opacity: 1;
+            animation: ani 5s infinite linear;
+        }
+
+        nav a::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 100%;
+            z-index: -1;
+            transition: 0.3s all ease-in-out;
+        }
+
+        nav a.linkedin::after {
+            background-color: #0371ae;
+        }
+
+        nav a.twitter::after {
+            background-color: #1c9ceb;
+        }
+
+        nav a.instagram::after {
+            background-color: #d12c7a;
+        }
+
+        nav a:hover::after {
+            opacity: 0;
+            transform: scale(3);
+        }
+
+        nav a svg {
+            width: 30px;
+            height: 30px;
+            transition: 0.3s all ease-in-out;
+        }
+
+        nav a:hover svg {
+            filter: drop-shadow(0 0 5px #fff);
+        }
+
+        nav a svg circle,
+        nav a svg path {
+            fill: #fff;
+        }
+
+        @keyframes ani {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1>MY AI</h1>
-        <p>Click the right corner widget.. Enjoy</p>
+        <p>Click the right corner widget. Enjoy</p>
         <a href="https://calendly.com/yassine-elkhoumsy-myai/meeting" class="email-button" target="_blank" title="Click to schedule a meeting with us">Speak with us</a>
     </div>
-    
+
+    <!-- Social Media Icons -->
+    <div class="social-icons">
+        <nav>
+            <a href="" class="twitter">
+                <svg viewBox="0 0 245.97 198.8"><path d="M44.28,59.23S89.07,113,147.62,111C140.12,86,172.14,21.7,234,65.49c0,0,24.77-5.26,32.28-12.51,0,0-3.5,14.76-20.77,27.52,0,0-1.25,2.5,27.53-6.76,0,0-12.27,16.77-25.28,26,0,0,7.18,101-91.91,141,0,0-60.72,26.69-128.79-14,0,0,40.71,6.67,74.4-20.69,0,0-38.36-3.67-46.37-35.36,0,0,13.35,3.67,22-1,0,0-36-4-39.7-49.71,0,0,17,7.33,22.35,6.33C59.71,126.37,23.85,104.52,44.28,59.23Z" transform="translate(-27.01 -50.6)"/></svg>
+            </a>
+            <a href="" class="linkedin">
+                <svg viewBox="0 0 244.65 226.28"><path d="M35.73,81.63a24.22,24.22,0,0,1-8-18.5,24.59,24.59,0,0,1,8-18.79q8.06-7.47,20.76-7.48,12.43,0,20.48,7.48a24.59,24.59,0,0,1,8,18.79,24.22,24.22,0,0,1-8,18.5q-8,7.5-20.48,7.49Q43.79,89.12,35.73,81.63ZM80.5,105.51V263.14H32.2V105.51Z" transform="translate(-27.68 -36.86)"/><path d="M255.8,121.75q16.51,17.94,16.52,49.3v92.09h-48v-85.6q0-15.81-8.19-24.57t-22-8.76q-13.84,0-22,8.76t-8.2,24.57v85.6H115.53V105.51h48.31v20.9a51.15,51.15,0,0,1,19.78-16.53,63,63,0,0,1,28-6.07Q239.27,103.81,255.8,121.75Z" transform="translate(-27.68 -36.86)"/></svg>
+            </a>
+            <a href="https://www.instagram.com/hamza_enchioua_myai/profilecard/?igsh=Y2I5MWJqamQ4Z24w" class="instagram">
+                <svg viewBox="0 0 246.15 246.15"><path d="M201,51.5A47.49,47.49,0,0,1,248.41,99V200.88A47.49,47.49,0,0,1,201,248.32H99a47.49,47.49,0,0,1-47.44-47.44V99A47.49,47.49,0,0,1,99,51.5H201m0-24.66H99A72.11,72.11,0,0,0,26.92,99V200.88A72.12,72.12,0,0,0,99,273H201a72.12,72.12,0,0,0,72.11-72.11V99A72.11,72.11,0,0,0,201,26.84ZM174.62,69.66a11.35,11.35,0,1,0,11.34,11.35A11.35,11.35,0,0,0,174.62,69.66ZM150.5,95.08a55.43,55.43,0,1,0,55.43,55.42,55.43,55.43,0,0,0-55.43-55.42Zm0,90.19A34.77,34.77,0,1,1,185.27,150,34.77,34.77,0,0,1,150.5,185.27Z" transform="translate(-26.92 -26.84)"/></svg>
+            </a>
+        </nav>
+    </div>
+
     <!-- Add the widget code here -->
     <script>
-    (function() {
-        window.VG_CONFIG = {
-            ID: "iuyybtajik17jaa8", // YOUR AGENT ID
-            region: 'na', // YOUR ACCOUNT REGION 
-            render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
-            stylesheets: [
-                // Base TIXAE Agents CSS
-                "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
-                // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
-            ],
-            // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
-            user: {
-                name: 'John Doe', // User's name
-                email: 'johndoe@gmail.com', // User's email
-                phone: '+1234567890', // User's phone number
+        (function() {
+            window.VG_CONFIG = {
+                ID: "iuyybtajik17jaa8", // YOUR AGENT ID
+                region: 'na', // YOUR ACCOUNT REGION 
+                render: 'bottom-right', // can be 'full-width' or 'bottom-left' or 'bottom-right'
+                stylesheets: [
+                    // Base TIXAE Agents CSS
+                    "https://vg-bunny-cdn.b-cdn.net/vg_live_build/styles.css",
+                    // Add your custom css stylesheets, Can also add relative URL ('/public/your-file.css)
+                ],
+                // THIS IS SUPPOSED TO BE CHANGED OR REMOVED.
+                user: {
+                    name: 'John Doe', // User's name
+                    email: 'johndoe@gmail.com', // User's email
+                    phone: '+1234567890', // User's phone number
+                }
+                // Optional user data -- end
+                // **
+                // userID: 'USER_ID', // If you want to use your own user_id
+                // autostart: true, // Whether to autostart the chatbot with the proactive message
             }
-            // Optional user data -- end
-            // **
-            // userID: 'USER_ID', // If you want to use your own user_id
-            // autostart: true, // Whether to autostart the chatbot with the proactive message
-        }
-        var VG_SCRIPT = document.createElement("script");
-        VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
-        VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
-        document.body.appendChild(VG_SCRIPT);
-    })();
-    </script>
-    <!-- End of widget code -->
+            var VG_SCRIPT = document.createElement("script");
+            VG_SCRIPT.src = "https://vg-bunny-cdn.b-cdn.net/vg_live_build/vg_bundle.js";
+            VG_SCRIPT.defer = true; // Remove 'defer' if you want widget to load faster (Will affect website loading)
+            document.body.appendChild(VG_SCRIPT);
+        })();
+        </script>
+        <!-- End of widget code -->
 </body>
 </html>
