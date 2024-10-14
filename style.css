@@ -23,35 +23,33 @@ p {
     margin: 20px 0;
 }
 
-.email-button {
-  position: relative;
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: transparent;
-  border: none;
-  color: white;
-  cursor: pointer;
-  outline: none;
-  border-radius: 25px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+.sparkle
+path:nth-of-type(1) {
+    --scale 0.5;
+    --delay: 0.1;
+    --base: 40%;
 }
-
-.email-button:before {
+.sparkle
+path:nth-of-type(2) {
+    --scale: 1.5;
+    --delay: 0.2;
+    --base: 20%;
+}
+button:before {
   content: "";
   position: absolute;
   inset: -0.25em;
   z-index: -1;
-  border: 0.25em solid hsl(260, 97%, 50%, 0.5);
-  border-radius: 25px;
-  opacity: 0;
-  transition: opacity 0.4s;
+  border: 0.25em solid hsl(260, 97%, 50%, 0.5); /* Glowing border */
+  border-radius: 100px;
+  opacity: var(--active, 0);
+  transition: opacity var(--transition);
 }
-
-.email-button:hover:before {
-  opacity: 1;
+.backdrop {
+  position: absolute;
+  inset: var(--cut);
+  background: var(--bg);
+  border-radius: 100px;
+  transition: background var(--transition);
 }
-
-.email-button:hover {
-  background-color: #357a38; /* Darker shade when hovered */
-}
+    
