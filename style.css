@@ -1,39 +1,40 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
-    font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+    background-color: #121212; /* Set background color to dark gray */
+    color: #ffffff; /* Set text color to white */
+    font-family: Arial, sans-serif; /* Use Arial or a similar sans-serif font */
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Set height to full viewport height */
+    margin: 0; /* Remove default margin */
 }
 
 .container {
-    text-align: center;
+    text-align: center; /* Center-align text inside the container */
 }
 
 h1 {
-    font-size: 48px;
-    color: #4285F4; /* blue color for the title */
+    font-size: 48px; /* Set the font size of the title */
+    color: #4285F4; /* Set title color to Google blue */
 }
 
 p {
-    font-size: 18px;
-    margin: 20px 0;
+    font-size: 18px; /* Set font size for paragraph text */
+    margin: 20px 0; /* Add space above and below paragraphs */
 }
 
 .email-button {
-    background-color: #ffffff;
-    color: #000000;
-    border: none;
-    border-radius: 25px;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 16px;
-    transition: background-color 0.3s; ease; /* Animation timing */
+    background-color: #ffffff; /* Set button background color to white */
+    color: #000000; /* Set button text color to black */
+    border: none; /* Remove any borders */
+    border-radius: 25px; /* Round the button corners */
+    padding: 10px 20px; /* Add padding inside the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Set button text size */
+    transition: background-color 0.3s ease; /* Smooth transition for background color on hover */
+    text-decoration: none; /* Remove underline from button text */
 }
 
 .email-button:hover {
-    background-color: #0080ff; /* Darker shade when hovered */
+    background-color: #0080ff; /* Change button background to blue when hovered */
 }
