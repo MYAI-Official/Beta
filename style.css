@@ -1,5 +1,5 @@
 body {
-    background-color: #121212; /* Set background color to dark gray */
+    background-color: #000000; /* Set background color to dark gray */
     color: #ffffff; /* Set text color to white */
     font-family: Arial, sans-serif; /* Use Arial or a similar sans-serif font */
     display: flex; /* Use flexbox for layout */
@@ -14,14 +14,8 @@ body {
 }
 
 h1 {
-    background-color: #121212; /* Set background color to dark gray */
-    color: #ffffff; /* Set text color to white */
-    font-family: Arial, sans-serif; /* Use Arial or a similar sans-serif font */
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    height: 100vh; /* Set height to full viewport height */
-    margin: 0; /* Remove default margin */
+    font-size: 48px; /* Set the font size of the title */
+    color: #4285F4; /* Set title color to Google blue */
 }
 
 p {
